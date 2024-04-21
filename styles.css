@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: linear-gradient(90deg, rgba(21,56,2,1) 43%, rgba(181,255,0,1) 100%);
+    --h1Color   : #8acf00;
+    --fontFamily: "Jersey 10", sans-serif;
+}
+
+main {
+    background: var(--background);
+}
+
+h1 {
+    
+    color          : var(--h1Color);
+    font-size      : 2rem;
+    font-family    : var(--fontFamily);
+    font-weight    : 100;
+    margin-bottom  : 1.7rem;
+    padding        : 12px 0 0 30px;
+    border-right   : 12px solid #000;
+    text-shadow    : 1px 3px 5px rgba(0, 0, 0, .3);
+    width          : 0;
+    white-space    : nowrap;
+    overflow       : hidden;
+    animation      : 
+    typeWriter 3s steps(31) forwards .2s,
+    blink 2s infinite;
+}
+
+div {
+    display        : flex;
+    justify-content: center;
+    margin-bottom  : .6em;
+}
+
+img {
+    max-width : 100%;
+    max-height: 100%;
+    filter    : blur(6px);
+    transition: .5s ease-in-out; 
+}
+
+img:hover {
+    filter   : none;
+    transform: scale(1.1);
+    animation: none;
+}
+
+@keyframes typeWriter {
+    to{width: 32rem;}
+}
+
+@keyframes blink {
+    0% {border-right-color : transparent;}
+    50%{border-right-color : #eee;}
+    100%{border-right-color: transparent;}
+}
+
+
+
+
+
+
