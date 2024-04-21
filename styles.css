@@ -54,7 +54,7 @@ img:hover {
 }
 
 @keyframes typeWriter {
-    to{width: 32rem;}
+    to{width: 26rem;}
 }
 
 @keyframes blink {
